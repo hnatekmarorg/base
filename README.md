@@ -1,1 +1,1 @@
-![pipeline_status](https://woodpecker.hnatekmar.xyz/api/badges/3/status.svg)
+[![status-badge](https://woodpecker.hnatekmar.xyz/api/badges/3/status.svg)](https://woodpecker.hnatekmar.xyz/repos/3)
