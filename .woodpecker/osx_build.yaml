@@ -12,6 +12,8 @@ steps:
   - name: build_bases
     image: /bin/bash
     commands:
+      - ls
+      - pwd
       - packer init .
       - packer build -var macos_version=${OSX_VERSION} .
       - tart push sonoma_base gitea.hnatekmar.xyz/osx:${OSX_VERSION}-latest
