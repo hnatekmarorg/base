@@ -12,7 +12,7 @@ matrix:
 
 steps:
   - name: build
-    image: /bin/zsh
+    image: /bin/bash
     commands:
       - cd osx
       - packer init .
