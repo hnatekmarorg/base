@@ -4,6 +4,7 @@ when:
 
 steps:
   - name: build
+    image: zsh
     commands:
       - packer init .
       - packer build -var macos_version=${OSX_VERSION} .
