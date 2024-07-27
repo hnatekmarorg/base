@@ -1,8 +1,4 @@
-matrix:
-  OSX_VERSION:
-    - sonoma
-    - ventura
-    - monterey
+
 
 when:
   - platform: darwin/arm64
