@@ -6,8 +6,8 @@ label:
 
 matrix:
   OSX_VERSION:
-    - sonoma
-    - ventura
+#    - sonoma
+#    - ventura
     - monterey
 
 steps:
