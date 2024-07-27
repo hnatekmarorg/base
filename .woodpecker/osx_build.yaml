@@ -14,6 +14,7 @@ steps:
   - name: build
     image: /bin/bash
     commands:
+      - env
       - cd osx
       - packer init .
       - packer build -var macos_version=${OSX_VERSION} .
