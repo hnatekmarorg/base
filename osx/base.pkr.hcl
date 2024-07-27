@@ -13,11 +13,11 @@ variable "macos_version" {
 }
 
 source "tart-cli" "tart" {
-  vm_base_name = "${var.macos_version}-vanilla"
-  vm_name      = "gitea.hnatekmar.xyz/osx:${var.macos_version}-base"
+  vm_base_name = "ghcr.io/cirruslabs/macos-${var.macos_version}-base:latest"
+  vm_name      = "${var.macos_version}-base"
   cpu_count    = 4
   memory_gb    = 4
-  disk_size_gb = 16
+  disk_size_gb = 50
   ssh_username = "admin"
   ssh_password = "admin"
   ssh_timeout  = "120s"
@@ -27,7 +27,7 @@ build {
   sources = ["source.tart-cli.tart"]
 
   provisioner "shell" {
-    inline = ["echo 'Disabling spotlight indexing...'", "sudo mdutil -a -i off"]
+    inline = ["mkdir .ssh && echo ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF+vlPAhg+TbppzQhqJ7joeQYU81EphWvyYswBH0oj21 martin@Martins-Mac-mini.local > .ssh/authorized_keys"]
   }
 
   # more provisioners
