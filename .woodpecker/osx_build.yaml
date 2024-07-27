@@ -19,3 +19,4 @@ steps:
       - tart push sonoma_base gitea.hnatekmar.xyz/osx:${OSX_VERSION}-latest
       - tart prune --space-budget 25
       
+
