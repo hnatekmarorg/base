@@ -14,8 +14,7 @@ steps:
   - name: build
     image: /bin/zsh
     commands:
-      - ls
-      - pwd
+      - cd osx
       - packer init .
       - packer build -var macos_version=${OSX_VERSION} .
       - tart push sonoma_base gitea.hnatekmar.xyz/osx:${OSX_VERSION}-latest
