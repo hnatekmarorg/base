@@ -1,6 +1,8 @@
 when:
-  - platform: darwin/arm64
-    event: push
+  - event: push
+
+label:
+  plaform: darvin/arm64
 
 steps:
   - name: build
