@@ -4,9 +4,15 @@ when:
 label:
   plaform: darvin/arm64
 
+matrix:
+  OSX_VERSION:
+    - sonoma
+    - ventura
+    - monterey
+
 steps:
   - name: build
-    image: zsh
+    image: /bin/zsh
     commands:
       - packer init .
       - packer build -var macos_version=${OSX_VERSION} .
