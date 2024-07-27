@@ -1,16 +1,18 @@
+when:
+  - event: push
+
+label:
+  plaform: darvin/arm64
+
 matrix:
   OSX_VERSION:
     - sonoma
     - ventura
     - monterey
 
-when:
-  - platform: darwin/arm64
-    event: push
-
 steps:
-  - name: build_bases
-    image: /bin/bash
+  - name: build
+    image: /bin/zsh
     commands:
       - ls
       - pwd
@@ -18,3 +20,5 @@ steps:
       - packer build -var macos_version=${OSX_VERSION} .
       - tart push sonoma_base gitea.hnatekmar.xyz/osx:${OSX_VERSION}-latest
       - tart prune --space-budget 25
+      
+
