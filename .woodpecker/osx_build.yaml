@@ -1,5 +1,3 @@
-
-
 when:
   - platform: darwin/arm64
     event: push
