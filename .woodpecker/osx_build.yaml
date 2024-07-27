@@ -17,7 +17,7 @@ steps:
       - cd osx
       - packer init .
       - packer build -var macos_version=${OSX_VERSION} .
-      - tart push sonoma_base gitea.hnatekmar.xyz/osx:${OSX_VERSION}-latest
+      - tart push ${OSX_VERSION}_base gitea.hnatekmar.xyz/osx:${OSX_VERSION}-latest
       - tart prune --space-budget 25
       
 
