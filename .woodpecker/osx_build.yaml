@@ -1,8 +1,8 @@
 when:
   - event: push
 
-label:
-  plaform: darvin/arm64
+#label:
+#  plaform: darvin/arm64
 
 matrix:
   OSX_VERSION:
@@ -14,7 +14,7 @@ steps:
   - name: build
     image: /bin/bash
     commands:
-      - env
+      - export
       - cd osx
       - packer init .
       - packer build -var macos_version=${OSX_VERSION} .
